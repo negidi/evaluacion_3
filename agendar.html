@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agendar</title>
+    <link rel="stylesheet" href="estilosp2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" alt="" width="30" height="30">
+            </a>
+            <a class="navbar-brand" href="#">Car Service Garage</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item subra">
+                        <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item subra">
+                        <a class="nav-link" href="#">Precios</a>
+                    </li>
+                    <li class="nav-item subra">
+                        <a class="nav-link active" href="agendar.html">Agenda tu hora</a>
+                    </li>
+                    <li class="nav-item subra">
+                        <a class="nav-link" href="#">Sucursales</a>
+                    </li>
+                    <li class="nav-item subra">
+                        <a class="nav-link" href="#">Galería</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    Servicios mecánicos de la region metropolitana
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!--Fin nav-->
+    <div class="container">
+        <h2>Agenda tu hora</h2>
+        <form action="#" method="post" name="formulario" id="formulario" class="row g-3">
+            <div class="col-sm-12 col-md-6">
+                <label for="txt_nombre">Nombre completo</label>
+                <input type="text" class="form-control" name="txt_nombre" id="txt_nombre"
+                    placeholder="Ingrese su nombre completo">
+                <!---->
+                <label for="txt_correo">Correo electronico</label>
+                <input type="email" class="form-control" name="txt_correo" id="txt_correo"
+                    placeholder="sucorreo@dominio.com">
+                <!---->
+                <label for="txt_telefono">Telefono</label>
+                <input type="text" class="form-control" name="txt_telefono" id="txt_telefono"
+                    placeholder="XXXXXXXXX">
+                <!---->
+                <label for="txt_rut">Rut</label>
+                <input type="text" class="form-control" name="txt_rut" id="txt_rut" placeholder="XXXXXXXX-X">
+                <!---->
+                <label for="txt_patente">Patente</label>
+                <input type="text" class="form-control" name="txt_patente" id="txt_patente" placeholder="AB1234">
+                <!---->
+                <div class="row">
+                    <div class="col">
+                        <label for="date_dia_solicitado">Fecha</label>
+                        <input type="date" class="form-control" name="date_dia_solicitado" id="date_dia_solicitado">
+                    </div>
+                    <!---->
+                    <div class="col">
+                        <label for="date_hora_solicitada">Dia</label>
+                        <input type="time" class="form-control" name="date_hora_solicitada" id="date_hora_solicitada">
+                    </div>
+                </div>
+                <div id="fecha_help" class="form-text">
+                    Cita sujeta a confirmacion por correo o teléfono
+                </div>
+                <!---->
+                <label for="select_tipo">Tipo de vehiculo</label>
+                <select class="form-select" name="select_tipo" id="select_tipo">
+                    <option selected disabled value="0">Selecione tipo</option>
+                    <option value="Sedan">Sedan</option>
+                    <option value="Compacto">Compacto</option>
+                    <option value="Suv/Pick Up">Suv/Pick Up</option>
+                    <option value="Motocicleta">Motocicleta</option>
+                </select>
+                <!---->
+                <!---->
+                <label>Servicio de retiro y entrega a domicilio</label><br>
+                <input type="radio" class="form-check-input" name="rbt_domiclio" id="rbt_domiclio" value="Si">
+                <label for="rbt_domiclio">Si</label>
+                <input type="radio" class="form-check-input" name="rbt_domiclio" id="rbt_domiclio" value="No" checked>
+                <label for="rbt_domiclio">No</label><br>
+                <!---->
+                <label for="txt_observaciones">Observaciones</label>
+                <textarea class="form-control" name="txt_observaciones" id="txt_observaciones" rows="6"
+                    placeholder="Dejanos un comentario"></textarea>
+                <!---->
+                <br>
+                <div class="col">
+                    <button type="button" class="btn btn-success" onclick="javascript:void(validar())">Confirmar
+                        solicitud</button>
+                    <button type="reset" class="btn btn-danger">Limpiar formulario</button>
+                </div>
+            </div>
+            <!--
+            <div class="col-sm-12 col-md-6">
+                tabla de precios?
+            </div>-->
+        </form>
+    </div>
+
+
+    <hr><br>
+    <!--fin formulario-->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <img src="img/logo.png" alt="" width="100" height="100">
+                    <br>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <a href="#" class="link-success">Mapa de sitio</a><br>
+                    <a href="#" class="link-success">Repuestos</a><br>
+                    <a href="#" class="link-success">Rent a car</a><br>
+                    <a href="#" class="link-success">Desabolladura y pintura</a><br>
+                    <a href="#" class="link-success">trabaja con nosotros</a>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <li class="list-group-item">Telefono: 600 8976600</li>
+                    <li class="list-group-item">Email: servifast@gmail.com</li>
+                    <l1 class="list-group-item">Casa matriz: Av. Quilín 2854</l1>
+                </div>
+                <div class="col-sm-12 col-md-3">
+                    <iframe width="200" height="100" src="https://www.youtube.com/embed/YwsvW4fLkJc"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <iframe width="200" height="100" src="https://www.youtube.com/embed/cFB69J3LirI"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+
+            </div>
+        </div>
+        <br>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
